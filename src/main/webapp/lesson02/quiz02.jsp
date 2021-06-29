@@ -23,9 +23,16 @@
 	crossorigin="anonymous"></script>
 </head>
 <body>
-	<h1>날짜, 시간 링크</h1>
-	<button type="button" onclick = "location.href = '/lesson02/quiz02_1.jsp?type=time'" class="btn btn-primary">현재 시간 확인</button>
-	<button type="button" onclick = "location.href = '/lesson02/quiz02_1.jsp?type=date'"class="btn btn-success">현재 날짜 확인</button>
-
+	<div class="ml-5">
+		<h1>날짜, 시간 링크</h1>
+		<div class="mt-5">
+			<button type="button"
+				onclick="location.href = '/lesson02/quiz02_1.jsp?type=time'"
+				class="btn btn-primary">현재 시간 확인</button>
+			<button type="button"
+				onclick="location.href = '/lesson02/quiz02_1.jsp?type=date'"
+				class="btn btn-success">현재 날짜 확인</button>
+		</div>
+	</div>
 </body>
 </html>
