@@ -37,70 +37,77 @@
 			<tbody>
 				<%
 				List<Map<String, Object>> list = new ArrayList<>();
-				Map<String, Object> map = new HashMap<String, Object>() {
-					{
-						put("name", "버거킹");
-						put("menu", "햄버거");
-						put("point", 4.3);
-					}
-				};
-				list.add(map);
-				map = new HashMap<String, Object>() {
-					{
-						put("name", "BBQ");
-						put("menu", "치킨");
-						put("point", 3.8);
-					}
-				};
-				list.add(map);
-				map = new HashMap<String, Object>() {
-					{
-						put("name", "교촌치킨");
-						put("menu", "치킨");
-						put("point", 4.1);
-					}
-				};
-				list.add(map);
-				map = new HashMap<String, Object>() {
-					{
-						put("name", "도미노피자");
-						put("menu", "피자");
-						put("point", 4.5);
-					}
-				};
-				list.add(map);
-				map = new HashMap<String, Object>() {
-					{
-						put("name", "맥도날드");
-						put("menu", "햄버거");
-						put("point", 3.8);
-					}
-				};
-				list.add(map);
-				map = new HashMap<String, Object>() {
-					{
-						put("name", "BHC");
-						put("menu", "치킨");
-						put("point", 4.2);
-					}
-				};
-				list.add(map);
-				map = new HashMap<String, Object>() {
-					{
-						put("name", "반올림피자");
-						put("menu", "피자");
-						put("point", 4.3);
-					}
-				};
-				list.add(map);
+						Map<String, Object> map = new HashMap<String, Object>() {
+							{
+								put("name", "버거킹");
+								put("menu", "햄버거");
+								put("point", 4.3);
+							}
+						};
+						list.add(map);
+						map = new HashMap<String, Object>() {
+							{
+								put("name", "BBQ");
+								put("menu", "치킨");
+								put("point", 3.8);
+							}
+						};
+						list.add(map);
+						map = new HashMap<String, Object>() {
+							{
+								put("name", "교촌치킨");
+								put("menu", "치킨");
+								put("point", 4.1);
+							}
+						};
+						list.add(map);
+						map = new HashMap<String, Object>() {
+							{
+								put("name", "도미노피자");
+								put("menu", "피자");
+								put("point", 4.5);
+							}
+						};
+						list.add(map);
+						map = new HashMap<String, Object>() {
+							{
+								put("name", "맥도날드");
+								put("menu", "햄버거");
+								put("point", 3.8);
+							}
+						};
+						list.add(map);
+						map = new HashMap<String, Object>() {
+							{
+								put("name", "BHC");
+								put("menu", "치킨");
+								put("point", 4.2);
+							}
+						};
+						list.add(map);
+						map = new HashMap<String, Object>() {
+							{
+								put("name", "반올림피자");
+								put("menu", "피자");
+								put("point", 4.3);
+							}
+						};
+						list.add(map);
 
-				String search = request.getParameter("search");
-				String check = request.getParameter("check");
+						String search = request.getParameter("search");
+						// 체크함 : "check" 체크 안함 : null
+						String check = request.getParameter("check");
+						
+						//for (Map<String, Object> item : list){
+								//<tr>
+								 //<td> <%= item.get("menu")
+								//</tr>
+						//}
 
-				for (int i = 0; i < list.size(); i++) {
-					Double point = (Double)list.get(i).get("point");
-					if (list.get(i).get("menu").equals(search)) {
-						if (check == null) {
+						for (int i = 0; i < list.size(); i++) {
+							Double point = (Double) list.get(i).get("point");
+							if (list.get(i).get("menu").equals(search)) {
+								if (check == null) {
 				%>
 				<tr>
 					<td><%=list.get(i).get("menu")%></td>
@@ -119,7 +126,7 @@
 
 							</tr>
 	
-													<%
+				<%
 							}
 						}
 					}
