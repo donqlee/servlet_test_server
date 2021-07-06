@@ -30,8 +30,9 @@
 header {
 	height: 40px;
 }
+
 #home {
- text-decoration:none;
+	text-decoration: none;
 }
 
 nav {
@@ -41,10 +42,13 @@ nav {
 .contents {
 	height: 270px;
 }
-.lists{
-height: 450px;}
-footer{
-height: 40px;
+
+.lists {
+	height: 450px;
+}
+
+footer {
+	height: 40px;
 }
 </style>
 </head>
@@ -56,7 +60,7 @@ height: 40px;
 		<jsp:include page="contents2.jsp" />
 		<jsp:include page="lists.jsp" />
 		<jsp:include page="lyrics.jsp" />
-		<jsp:include page="footer.jsp" />		
+		<jsp:include page="footer.jsp" />
 	</div>
 </body>
 </html>

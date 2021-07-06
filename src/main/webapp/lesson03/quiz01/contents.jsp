@@ -149,27 +149,17 @@ list.add(map);
 		<%
 			String category = request.getParameter("category");
 			for(Map<String, String> item : list){
-				//if (category != null && item.get)
-				if(category == null){
-					%>
-					<tr>
-						<td><%= item.get("ch")%></td>
-						<td><%= item.get("name")%></td>
-						<td><%= item.get("category")%></td>
-					</tr>
-					<% 
-				}else if(category.equals(item.get("category"))){
-					%>
-					<tr>
-						<td><%= item.get("ch")%></td>
-						<td><%= item.get("name")%></td>
-						<td><%= item.get("category")%></td>
-					</tr>
-					<%
-				}
+				if (category != null && !(item.get("category").equals(category))){
+					continue;
+				} %>
+				<tr>
+					<td><%= item.get("ch")%></td>
+					<td><%= item.get("name")%></td>
+					<td><%= item.get("category")%></td>
+				</tr>
+		<%
 			}
 		%>
-			
 		</tbody>
 	</table>
 </section>
