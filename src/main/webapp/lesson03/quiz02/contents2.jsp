@@ -76,7 +76,9 @@ String title = request.getParameter("title");
 %>
 
 
-
+<%
+if (title != null) {
+%>
 <h4 class="font-weight-bold mt-2">곡 정보</h4>
 <section class="contents d-flex border border-success">
 	<%
@@ -114,7 +116,10 @@ String title = request.getParameter("title");
 		</table>
 	</div>
 	<%
-		}
+	}
 	}
 	%>
 </section>
+<%
+}
+%>

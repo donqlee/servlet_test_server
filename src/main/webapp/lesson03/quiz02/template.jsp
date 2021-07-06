@@ -25,11 +25,13 @@
 #wrap {
 	margin: auto;
 	width: 80%;
-	height: 900px;
 }
 
 header {
 	height: 40px;
+}
+#home {
+ text-decoration:none;
 }
 
 nav {
@@ -37,7 +39,7 @@ nav {
 }
 
 .contents {
-	height: 250px;
+	height: 270px;
 }
 .lists{
 height: 450px;}
@@ -51,7 +53,9 @@ height: 40px;
 		<jsp:include page="header.jsp" />
 		<jsp:include page="nav.jsp" />
 		<jsp:include page="contents.jsp" />
+		<jsp:include page="contents2.jsp" />
 		<jsp:include page="lists.jsp" />
+		<jsp:include page="lyrics.jsp" />
 		<jsp:include page="footer.jsp" />		
 	</div>
 </body>

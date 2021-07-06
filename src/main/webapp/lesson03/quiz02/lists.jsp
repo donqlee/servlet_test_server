@@ -72,6 +72,9 @@ musicInfo.put("time", 217);
 musicInfo.put("composer", "아이유,이종훈,이채규");
 musicInfo.put("lyricist", "아이유");
 musicList.add(musicInfo);
+
+String title = request.getParameter("title");
+if (title == null) {
 %>
 <section class="lists">
 	<h4 class="font-weight-bold mt-2">곡 목록</h4>
@@ -84,17 +87,21 @@ musicList.add(musicInfo);
 			</tr>
 		</thead>
 		<tbody>
-		<% 
-			for(Map<String, Object> item : musicList){
-		%>	
-				<tr>
-					<td><%= item.get("id") %></td>
-					<td><a href="/lesson03/quiz02/template_detail.jsp?title=<%=item.get("title") %>"><%= item.get("title") %></a></td>
-					<td><%= item.get("album") %></td>
-				</tr>
-		<% 
+			<%
+			for (Map<String, Object> item : musicList) {
+			%>
+			<tr>
+				<td><%=item.get("id")%></td>
+				<td><a
+					href="/lesson03/quiz02/template.jsp?title=<%=item.get("title")%>"><%=item.get("title")%></a></td>
+				<td><%=item.get("album")%></td>
+			</tr>
+			<%
 			}
-		%>	
+			%>
 		</tbody>
 	</table>
 </section>
+<%
+}
+%>
